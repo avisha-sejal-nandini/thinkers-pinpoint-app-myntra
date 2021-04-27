@@ -147,9 +147,21 @@ class Demo extends StatelessWidget {
                 if (snapshot.hasError)
                   throw snapshot.error;
                 else if (!snapshot.hasData || position == null) {
-                  return Center(
-                    child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
+                  return Scaffold(
+                    backgroundColor: Colors.white,
+                    body: InkWell(
+                      child: Stack(
+                        fit: StackFit.expand,
+                        children: <Widget>[
+                          Container(
+                            child: Center(
+                              child: Image.asset(
+                                'assets/splashScreen.jpeg',
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   );
                 } else {
@@ -230,7 +242,7 @@ class Demo extends StatelessWidget {
                                                 fontWeight: FontWeight.w700,
                                                 color: Colors.black,
                                                 backgroundColor: Colors.white60,
-                                                fontSize: 16.0),
+                                                fontSize: 18.0),
                                           ),
                                         ),
                                         SizedBox(
@@ -248,7 +260,7 @@ class Demo extends StatelessWidget {
                                                 fontFamily: 'Amiri',
                                                 fontWeight: FontWeight.w600,
                                                 color: Colors.black87,
-                                                fontSize: 10.0),
+                                                fontSize: 14.0),
                                           ),
                                         ),
                                       ]))
@@ -264,7 +276,9 @@ class Demo extends StatelessWidget {
                                       child: GestureDetector(
                                         onTap: () {
                                           if ('${snapshot.data[i]['availability']}' ==
-                                              "No") {
+                                                  "No" ||
+                                              '${snapshot.data[i]['availability']}' ==
+                                                  "No ") {
                                             _notificationAlert(context);
                                           }
                                         },

@@ -11,6 +11,7 @@ import 'package:my_myntra/Screens/Products/ProductDetail6.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'package:barcode_scan_fix/barcode_scan.dart';
+//import 'DemoProDet1.dart';
 
 class ProductsPage extends StatefulWidget {
   @override
@@ -19,13 +20,6 @@ class ProductsPage extends StatefulWidget {
 
 class _ProductsPageState extends State<ProductsPage> {
   String qrCodeResult = "Not Yet Scanned";
-  _ProductsPageState() {
-    //Init Alan with sample project id
-    AlanVoice.addButton(
-      "454e0f61d849e6a9a445b584db0638692e956eca572e1d8b807a3e2338fdd0dc/stage",
-      buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT,
-    );
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -140,53 +134,204 @@ class _ProductsPageState extends State<ProductsPage> {
             Row(
               children: [
                 Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ProductDetailPage1()));
-                      },
-                      child: Container(
-                        height: 360,
-                        width: getWidth(context) * 0.5,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/product1.jpeg'),
-                                fit: BoxFit.fill)),
-                      ),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductDetailPage1()));
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 280,
+                          width: getWidth(context) * 0.5,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/prod1.jpg'),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          height: 68.0,
+                          color: Colors.grey[200],
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Allen Solly Women",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                          fontFamily: 'Teko',
+                                          fontSize: 13.0,
+                                          color: Colors.black),
+                                    ),
+                                    Text(
+                                      "Women formal wear",
+                                      style: TextStyle(
+                                        fontFamily: 'Teko',
+                                        fontSize: 10.0,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "₹974  ",
+                                          style: TextStyle(
+                                              fontFamily: 'Teko',
+                                              fontSize: 13.0,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                          " ₹1,240  ",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Text(
+                                          " 61% OFF",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            color: Colors.red,
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Text(
+                                  "♡",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 15),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
+                SizedBox(
+                  width: 1.0,
+                ),
                 Expanded(
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 4.0),
-                    child: GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ProductDetailPage2()));
-                      },
-                      child: Container(
-                        height: 360,
-                        width: getWidth(context) * 0.5,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: AssetImage('assets/product2.jpeg'),
-                                fit: BoxFit.fill)),
-                      ),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ProductDetailPage2()));
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 280,
+                          width: getWidth(context) * 0.5,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/prod2.jpg'),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          height: 68.0,
+                          color: Colors.grey[200],
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Raymond",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                          fontFamily: 'Teko',
+                                          fontSize: 13.0,
+                                          color: Colors.black),
+                                    ),
+                                    Text(
+                                      "Men Solid Suit",
+                                      style: TextStyle(
+                                        fontFamily: 'Teko',
+                                        fontSize: 10.0,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "₹5,399 ",
+                                          style: TextStyle(
+                                              fontFamily: 'Teko',
+                                              fontSize: 13.0,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                          " ₹11,240  ",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Text(
+                                          " 55% OFF",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            color: Colors.red,
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Text(
+                                  "♡",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 15),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 )
               ],
             ),
+            SizedBox(
+              height: 1.0,
+            ),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                Expanded(
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -194,18 +339,96 @@ class _ProductsPageState extends State<ProductsPage> {
                           MaterialPageRoute(
                               builder: (context) => ProductDetailPage3()));
                     },
-                    child: Container(
-                      height: 360,
-                      width: getWidth(context) * 0.5,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/product3.jpeg'),
-                              fit: BoxFit.fill)),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 280,
+                          width: getWidth(context) * 0.5,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/prod3.jpg'),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          height: 68.0,
+                          color: Colors.grey[200],
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Tokyo Talkies",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                          fontFamily: 'Teko',
+                                          fontSize: 13.0,
+                                          color: Colors.black),
+                                    ),
+                                    Text(
+                                      "Solid Sheath Dress",
+                                      style: TextStyle(
+                                        fontFamily: 'Teko',
+                                        fontSize: 10.0,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "₹519  ",
+                                          style: TextStyle(
+                                              fontFamily: 'Teko',
+                                              fontSize: 13.0,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                          " ₹1,240  ",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Text(
+                                          " 60% OFF",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            color: Colors.red,
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Text(
+                                  "♡",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 15),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                SizedBox(
+                  width: 1.0,
+                ),
+                Expanded(
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -213,22 +436,100 @@ class _ProductsPageState extends State<ProductsPage> {
                           MaterialPageRoute(
                               builder: (context) => ProductDetailPage4()));
                     },
-                    child: Container(
-                      height: 360,
-                      width: getWidth(context) * 0.5,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/product4.jpeg'),
-                              fit: BoxFit.fill)),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 280,
+                          width: getWidth(context) * 0.5,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/prod4.jpg'),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          height: 68.0,
+                          color: Colors.grey[200],
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "MANGO",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                          fontFamily: 'Teko',
+                                          fontSize: 13.0,
+                                          color: Colors.black),
+                                    ),
+                                    Text(
+                                      "Textured A-Line Dress",
+                                      style: TextStyle(
+                                        fontFamily: 'Teko',
+                                        fontSize: 10.0,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "₹3,231  ",
+                                          style: TextStyle(
+                                              fontFamily: 'Teko',
+                                              fontSize: 13.0,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                          " ₹3,590  ",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Text(
+                                          " 10% OFF",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            color: Colors.red,
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Text(
+                                  "♡",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 15),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 )
               ],
             ),
+            SizedBox(
+              height: 1.0,
+            ),
             Row(
               children: [
-                Padding(
-                  padding: const EdgeInsets.only(top: 4.0, bottom: 4.0),
+                Expanded(
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -236,18 +537,96 @@ class _ProductsPageState extends State<ProductsPage> {
                           MaterialPageRoute(
                               builder: (context) => ProductDetailPage5()));
                     },
-                    child: Container(
-                      height: 360,
-                      width: getWidth(context) * 0.5,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/product5.jpeg'),
-                              fit: BoxFit.fill)),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 280,
+                          width: getWidth(context) * 0.5,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/prod5.jpg'),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          height: 68.0,
+                          color: Colors.grey[200],
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "H&M",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                          fontFamily: 'Teko',
+                                          fontSize: 13.0,
+                                          color: Colors.black),
+                                    ),
+                                    Text(
+                                      "Track Suit",
+                                      style: TextStyle(
+                                        fontFamily: 'Teko',
+                                        fontSize: 10.0,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "₹1800  ",
+                                          style: TextStyle(
+                                              fontFamily: 'Teko',
+                                              fontSize: 13.0,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                          " ₹1,900  ",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Text(
+                                          " 10% OFF",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            color: Colors.red,
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Text(
+                                  "♡",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 15),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 4.0),
+                SizedBox(
+                  width: 1.0,
+                ),
+                Expanded(
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
@@ -255,13 +634,89 @@ class _ProductsPageState extends State<ProductsPage> {
                           MaterialPageRoute(
                               builder: (context) => ProductDetailPage6()));
                     },
-                    child: Container(
-                      height: 360,
-                      width: getWidth(context) * 0.5,
-                      decoration: BoxDecoration(
-                          image: DecorationImage(
-                              image: AssetImage('assets/product6.jpeg'),
-                              fit: BoxFit.fill)),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 280,
+                          width: getWidth(context) * 0.5,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: AssetImage('assets/prod6.jpg'),
+                                  fit: BoxFit.fill)),
+                        ),
+                        Container(
+                          height: 68.0,
+                          color: Colors.grey[200],
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                  child: Padding(
+                                padding: const EdgeInsets.only(left: 10.0),
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      "Bitiya by Bhama",
+                                      textAlign: TextAlign.start,
+                                      style: TextStyle(
+                                          fontFamily: 'Teko',
+                                          fontSize: 13.0,
+                                          color: Colors.black),
+                                    ),
+                                    Text(
+                                      "Girls Playsuit",
+                                      style: TextStyle(
+                                        fontFamily: 'Teko',
+                                        fontSize: 10.0,
+                                        color: Colors.grey[600],
+                                      ),
+                                    ),
+                                    Row(
+                                      children: [
+                                        Text(
+                                          "₹999  ",
+                                          style: TextStyle(
+                                              fontFamily: 'Teko',
+                                              fontSize: 13.0,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                          " ₹1,240  ",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            decoration:
+                                                TextDecoration.lineThrough,
+                                            color: Colors.grey[600],
+                                          ),
+                                        ),
+                                        Text(
+                                          " 61% OFF",
+                                          style: TextStyle(
+                                            fontFamily: 'Teko',
+                                            fontSize: 12.0,
+                                            color: Colors.red,
+                                          ),
+                                        )
+                                      ],
+                                    )
+                                  ],
+                                ),
+                              )),
+                              Padding(
+                                padding: const EdgeInsets.only(right: 8.0),
+                                child: Text(
+                                  "♡",
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 15),
+                                ),
+                              )
+                            ],
+                          ),
+                        )
+                      ],
                     ),
                   ),
                 )

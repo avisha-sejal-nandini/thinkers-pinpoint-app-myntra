@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:my_myntra/main.dart';
 import 'package:alan_voice/alan_voice.dart';
-import 'package:my_myntra/Screens/SplashScreen/splashScreen.dart';
+import 'package:my_myntra/Screens/Pinpoint/VendorList.dart';
 
 class ProductDetailPage6 extends StatefulWidget {
   @override
@@ -9,12 +9,6 @@ class ProductDetailPage6 extends StatefulWidget {
 }
 
 class _ProductDetailPage6State extends State<ProductDetailPage6> {
-  _ProductDetailPage6State() {
-    //Init Alan with sample project id
-    AlanVoice.addButton(
-        "454e0f61d849e6a9a445b584db0638692e956eca572e1d8b807a3e2338fdd0dc/stage",
-        buttonAlign: AlanVoice.BUTTON_ALIGN_LEFT);
-  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -46,7 +40,7 @@ class _ProductDetailPage6State extends State<ProductDetailPage6> {
         child: Column(
           children: [
             Container(
-              child: Image.asset("assets/productImage6.jpg"),
+              child: Image.asset("assets/prod6.jpg"),
             ),
             Container(
               child: Image.asset("assets/info2.jpg"),
@@ -61,7 +55,7 @@ class _ProductDetailPage6State extends State<ProductDetailPage6> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => SplashScreen(number: 6.0)));
+                              builder: (context) => Demo(number: 6.0)));
                     },
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
